@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //创建一个ajax的对象
+    var add=new XMLHttpRequest();
+    // GET方式：
+    //请求方式、地址、同步/异步
+add.open("get","./ajax.json",true);
+//
+add.send();
+add.onreadystatechange=function(){
+//拿到
+if(add.readyState ==4){
+    //成功
+    if(add.status==200){
+        document.write("大功告成");
+    }else{
+        document.write("惨不忍睹");
+    }
+}
+}
+</script>
+</body>
+</html>
